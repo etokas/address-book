@@ -1,7 +1,7 @@
 Carnet d'adresse en Symfony
 ========
 
-[FOSUserundle](https://github.com/FriendsOfSymfony/FOSUserBundle) FOSUserBundle pour la gestion des utilisateurs 
+[FOSUserundle](https://github.com/FriendsOfSymfony/FOSUserBundle) pour la gestion des utilisateurs 
 
 [FOSRestBundle](https://github.com/FriendsOfSymfony/FOSRestBundle) pour l’utilisation de l’Api su site 
 Exemple :
