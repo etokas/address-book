@@ -6,10 +6,14 @@ Carnet d'adresse en Symfony
 [FOSRestBundle](https://github.com/FriendsOfSymfony/FOSRestBundle) pour l’utilisation de l’Api su site 
 Exemple :
 #### Retourner la liste de tous les utilisateurs du site 
-`http://localhost/api/users`
+```PHP
+http://localhost/api/users
+```
 
 #### Retourner un utilisateur précis
-`http://localhost/api/users/1`
+```PHP
+http://localhost/api/users/1`
+```
 
 Ces requêtes Api retournent du JSON.
 
