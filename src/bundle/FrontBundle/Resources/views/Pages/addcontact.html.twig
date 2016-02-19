@@ -1,0 +1,40 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <h3>Ajouter un contact</h3>
+
+    {{ form_start(form) }}
+
+    {{ form_label(form.username ) }}
+
+    {{ form_widget(form.username, {'attr': {'class': 'form-control'}}) }}
+
+    {{ form_label(form.email) }}
+    {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+
+    {{ form_label(form.plainPassword.first) }}
+    {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control'}}) }}
+
+    {{ form_label(form.plainPassword.second) }}
+    {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control'}}) }}
+
+    {{ form_label(form.telephone) }}
+    {{ form_widget(form.telephone, {'attr': {'class': 'form-control'}}) }}
+
+    {{ form_label(form.adresse) }}
+    {{ form_widget(form.adresse, {'attr': {'class': 'form-control'}}) }}
+
+    {{ form_label(form.siteWeb) }}
+    {{ form_widget(form.siteWeb, {'attr': {'class': 'form-control'}}) }}
+    <br>
+
+    {{ form_widget(form.ajouter, {'attr': {'class': 'btn btn-primary'}}) }}
+
+    {{ form_rest(form) }}
+
+    <br>
+    <br>
+    <a href="{{ path('fos_user_profile_show') }}" class="btn btn-info" role="button">Vers le profils</a>
+
+
+{% endblock %}

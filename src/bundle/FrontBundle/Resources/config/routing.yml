@@ -1,0 +1,28 @@
+#La page d'acceuil du site
+front_homepage:
+    path:     /
+    defaults: { _controller: FrontBundle:Default:index }
+
+#La route qui affiche la liste des contact à ajouter
+add_contact_list:
+    path:     /profile/add-contact
+    defaults: { _controller: FrontBundle:Default:addContact }
+
+#La route pour ajouter un utilisateur dans son carnet
+#en recuperant l'id de l'utilisateur
+#La route qui affiche la liste de contact dans le carnet de l'utiliateur
+list_contact:
+    path:     /profile/list-contact
+    defaults: { _controller: FrontBundle:Default:listContact }
+
+#la route qui supprime un utilisateur dans la liste de carnet d'adresse
+delete_user:
+    path:     /profile/delete-user/{id}
+    defaults: { _controller: FrontBundle:Default:deleteUser }
+
+#La route qui va gerer les requetes de l'API
+users:
+    type:     rest
+    resource: bundle\FrontBundle\Controller\ApiController
+    #Le prefix qui va s'afficher devant chaque chaque lien
+    prefix: api

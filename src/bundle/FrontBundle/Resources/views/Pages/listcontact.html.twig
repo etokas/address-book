@@ -1,0 +1,39 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+
+    <h3>Heyy !! {{ app.user }} Voici ta liste de contact</h3><br>
+
+    {# Je verifie si la l'utilisateur n'a pas de contact dans son carnet#}
+    {% if users is empty %}
+        <p>Votre liste de contact est vide</p>
+    {% else %}
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Site Web</th>
+                <th>Téléphone</th>
+                <th>Action</th>
+            </tr>
+            <tbody>
+            {# Parcours de la liste de contact et on affiche differente information#}
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.siteWeb }}</td>
+                    <td>{{ user.telephone }}</td>
+                    <td><a href="{{ path('delete_user', {'id' : user.id}) }}" class="btn btn-danger" role="button">Supprimer</td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    {% endif %}
+
+    <a href="{{ path('fos_user_profile_show') }}" class="btn btn-info" role="button">Vers le profils</a>
+    <a href="{{ path('add_contact_list') }}" class="btn btn-primary" role="button">Ajouter des utilisateurs</a>
+
+{% endblock  %}

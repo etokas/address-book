@@ -1,0 +1,10 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <h3>Votre profils</h3>
+{% include "FOSUserBundle:Profile:show_content.html.twig" %}
+
+    <a href="{{ path('add_contact_list') }}">Ajouter des contacts</a><br>
+    <a href="{{ path('list_contact') }}">Liste de contacts</a><br>
+    <a href="{{ path('fos_user_profile_edit') }}">Modifier le profils</a>
+{% endblock  %}
