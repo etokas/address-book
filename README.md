@@ -1,4 +1,4 @@
-Address book en Symfony
+Carnet d'adresse en Symfony
 ========
 
 
