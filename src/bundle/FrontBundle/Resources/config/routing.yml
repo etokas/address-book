@@ -24,5 +24,4 @@ delete_user:
 users:
     type:     rest
     resource: bundle\FrontBundle\Controller\ApiController
-    #Le prefix qui va s'afficher devant chaque chaque lien
     prefix: api

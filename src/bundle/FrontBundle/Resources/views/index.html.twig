@@ -3,5 +3,86 @@
 
 {% block body %}
 
+    <div class="row">
+        <div class="text-center" style="margin-bottom: 30px"><h3>Choisissez une zone</h3></div>
+        <div class="col-sm-2">
+            {#<div class="form-group">
+                <label for="location">Adresse</label>
+                <input id="autocomplete" onFocus="geolocate()" name="location" type="text" class="form-control" placeholder="Adresse">
+            </div>#}
+
+            <div class="form-group">
+                <label for="rooms">Nombre de pièces</label>
+                <select name="piece" id="piece" class="form-control">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4 et plus</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="annee ">Choisir la periode</label>
+                <select name="annee" id="annee" class="form-control">
+                    <option value="inf1946">Avant 1946</option>
+                    <option value="1946-1970">1946 - 1970</option>
+                    <option value="1971-1990">1971 - 1990</option>
+                    <option value="sup1990">Après 1990</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="type ">Type</label>
+                <select name="type" id="type" class="form-control">
+                    <option value="meuble">Meublé</option>
+                    <option value="non-meuble">Non meublé</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="surface">Surface</label>
+                <div class="input-group">
+                    <input id="surface" name="surface" type="number" class="form-control" placeholder="Surface">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-default send">Mettre à jour</button>
+
+            <div class="message alert-danger">Selectionnez une zone pour calculez le prix max</div>
+
+        </div>
+        <div class="col-sm-7">
+            <div id="googleMap" style="width:700px;height:480px;"></div>
+        </div>
+        <div class="prix-legal col-sm-3">
+            <h4>Prix legal minimum</h4>
+            <p class="surface-min">0.0 € / mois</p>
+            <br>
+            <h4>Prix legal maximum</h4>
+            <p class="surface-max">0.0 € / mois</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="property">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Ville</th>
+                    <th>Prix</th>
+                    <th>Prix max</th>
+                    <th>Prix min</th>
+                    <th>Type</th>
+                    <th>Piece</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr class="resultat">
+                        <td class="name-ville" style="width: 150px"></td>
+                        <td class="prix" style="width: 100px"></td>
+                        <td class="prix-max" style="width: 100px"></td>
+                        <td class="prix-min" style="width: 100px"></td>
+                        <td class="type" style="width: 100px"></td>
+                        <td class="piece" style="width: 100px"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 {% endblock %}

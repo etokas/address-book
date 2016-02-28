@@ -2,6 +2,20 @@
     margin-top: 90px;
 }
 
-.form-control{
-    width: 300px;
+
+.property{
+    margin-top: 20px;
+}
+
+.prix-legal{
+    text-align: center;
+}
+
+.surface-max, .surface-min{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.message{
+    visibility: hidden;
 }
